@@ -1,0 +1,47 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Usuarios",
+    "dateExported": "2024-03-02T20:34:48.950Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "4ea70f98-9ab8-48c9-b83b-b000feaf281c",
+            "colId": "73dca60b-0980-4810-b363-f601d25af691",
+            "containerId": "",
+            "name": "Registro",
+            "url": "http://localhost:3000/api/v1/users/registro",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-02T20:31:12.398Z",
+            "modified": "2024-03-02T20:31:12.398Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"3\",\n  \"email\": \"3@kinal.edu.gt\",\n  \"password\": \"333333\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "91aa8c9b-4c1f-4ee9-8424-dc0ae957254f",
+            "colId": "73dca60b-0980-4810-b363-f601d25af691",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:3000/api/v1/users/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-02T20:32:14.573Z",
+            "modified": "2024-03-02T20:32:14.573Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"3@kinal.edu.gt\",\n  \"password\": \"333333\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

@@ -53,8 +53,8 @@ export const userPut = async (req, res) => {
 
 
 export const registrarse = async (req, res) => {
-    const { nameUser, email, password, role } = req.body;
-    const usuario = new User({ nameUser, email, password, role });
+    const { nombre, email, password, role } = req.body;
+    const usuario = new User({ nombre, email, password, role });
 
     const salt = bcryptjs.genSaltSync();
     usuario.password = bcryptjs.hashSync(password, salt);
@@ -72,15 +72,11 @@ export const login = async (req, res) => {
     try {
         
         const usuario = await User.findOne({ email });
-
-
         if (!usuario) {
             return res.status(400).json({
                 msg: 'El correo no está registrado'
             });
         }
-        
-
         if (!usuario.estado) {
             return res.status(400).json({
                 msg: 'El usuario no existe'
@@ -93,7 +89,6 @@ export const login = async (req, res) => {
                 msg: 'La contraseña no coincide'
             });
         }
-        
 
         const token = await generarJWT(usuario.id);
 
@@ -103,8 +98,6 @@ export const login = async (req, res) => {
             usuario,
             token
         });
-
-
     } catch (error) {
         console.log("Error:", error);
         res.status(500).json({
