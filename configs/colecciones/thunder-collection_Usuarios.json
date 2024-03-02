@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Usuarios",
-    "dateExported": "2024-03-02T20:34:48.950Z",
+    "dateExported": "2024-03-02T21:49:17.877Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -39,6 +39,30 @@
             "body": {
                 "type": "json",
                 "raw": "{\n  \"email\": \"3@kinal.edu.gt\",\n  \"password\": \"333333\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9981800b-4b13-4af5-bccd-f393aa63d853",
+            "colId": "73dca60b-0980-4810-b363-f601d25af691",
+            "containerId": "",
+            "name": "editar usuario con put",
+            "url": "http://localhost:3000/api/v1/users/65e38834f5d022bb5dee3ef2",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-02T21:48:39.651Z",
+            "modified": "2024-03-02T21:48:39.653Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzODgzNGY1ZDAyMmJiNWRlZTNlZjIiLCJpYXQiOjE3MDk0MTU2MjUsImV4cCI6MTcwOTQxOTIyNX0.jgYHIRNXLRotW_pOySX5p-k0rqSYmWbSAiuXpE24gHc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameUser\": \"4\",\n  \"password\": \"333333\"\n}",
                 "form": []
             },
             "tests": []
