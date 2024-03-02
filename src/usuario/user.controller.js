@@ -1,6 +1,8 @@
 import { response, request } from  'express';
 import bcryptjs from 'bcryptjs';
 import User from './user.model.js';
+import { generarJWT } from '../helpers/generate-jwt.js'
+
 
 export const userPut = async (req, res) => {
     try {
@@ -16,15 +18,11 @@ export const userPut = async (req, res) => {
                 msg: 'No tienes permiso para actualizar este usuario',
             });
         }
-
-        
         if (!password) {
             return res.status(400).json({
                 msg: 'Debes proporcionar la contraseña anterior para actualizar',
             });
         }
-
-        
         const usuario = await User.findById(id);
         if (!usuario) {
             return res.status(400).json({
@@ -67,7 +65,7 @@ export const registrarse = async (req, res) => {
     });
 }
 
-const login = async (req, res) => {
+export const login = async (req, res) => {
     
     const { email, password } = req.body;
     
@@ -114,4 +112,3 @@ const login = async (req, res) => {
         });
     }
 }
-

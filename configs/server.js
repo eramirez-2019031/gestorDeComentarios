@@ -5,7 +5,7 @@ import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
-//import userRoutes from '../src/usuario/user.routes.js';
+import userRoutes from '../src/usuario/user.routes.js';
 
 class Server{
     constructor(){
@@ -32,12 +32,11 @@ class Server{
 
     routes(){
         this.app.use(this.usuarioPath, userRoutes);
-        this.app.use(this.empresasPath, empresasRoutes);
     }
 
     listen(){
         this.app.listen(this.port, () => {
-            console.log('Server running on port', this.port);
+            console.log('Servidor corriendo en el puerto', this.port);
         });
     }
 }
