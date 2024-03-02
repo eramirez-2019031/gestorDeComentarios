@@ -1,7 +1,7 @@
 {
-  "name": "gestor1",
+  "name": "gestor2",
   "version": "1.0.0",
-  "description": "Gestor de empresas",
+  "description": "Gestor de comentarios",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
