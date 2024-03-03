@@ -1,5 +1,5 @@
-import comentario from  './comentario.model';
-const userHasComment = require('../models/userHasComment');
+import Comentario from  './comentario.model';
+import usercomentario from '../models/userHasComment';
 
 
 export const crearPublicacion = async (req, res) => {
