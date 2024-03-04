@@ -7,7 +7,7 @@ import { generarJWT } from '../helpers/generate-jwt.js'
 export const userPut = async (req, res) => {
     try {
         const { id } = req.params;
-        const { _id, password, ...resto } = req.body;
+        const { oldPassword, newPassword, ...resto } = req.body;
 
         const usuarioAutenticado = req.usuario;
         const idCoincide = usuarioAutenticado._id.toString() === id;
@@ -18,11 +18,13 @@ export const userPut = async (req, res) => {
                 msg: 'No tienes permiso para actualizar este usuario',
             });
         }
-        if (!password) {
+
+        if (!oldPassword || !newPassword) {
             return res.status(400).json({
-                msg: 'Debes proporcionar la contraseña anterior para actualizar',
+                msg: 'Debes proporcionar tanto la contraseña anterior como la nueva para actualizar',
             });
         }
+        
         const usuario = await User.findById(id);
         if (!usuario) {
             return res.status(400).json({
@@ -30,14 +32,24 @@ export const userPut = async (req, res) => {
             });
         }
 
-        const contrasenaValida = await bcryptjs.compare(password, usuario.password);
+        const contrasenaValida = await bcryptjs.compare(oldPassword, usuario.password);
         if (!contrasenaValida) {
             return res.status(400).json({
                 msg: 'La contraseña anterior no es válida',
             });
         }
 
-        const updatedUser = await User.findByIdAndUpdate(id, resto, { new: true });
+        const hashedPassword = await bcryptjs.hash(newPassword, 10);
+
+        usuario.password = hashedPassword;
+        await usuario.save();
+
+        if (!password) {
+            return res.status(400).json({
+                msg: 'Debes proporcionar la contraseña anterior para actualizar',
+            });
+        }
+
         
         res.status(200).json({
             msg: 'Se actualizó el perfil correctamente',

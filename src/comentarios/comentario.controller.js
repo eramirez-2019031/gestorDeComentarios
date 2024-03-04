@@ -1,5 +1,5 @@
-import Comentario from  './comentario.model';
-import usercomentario from '../models/userHasComment';
+import Comentario from  './comentario.model.js';
+import usercomentario from './usercomentario.model.js';
 
 
 export const crearPublicacion = async (req, res) => {
@@ -97,7 +97,7 @@ export const getComentarioComments = async (req, res) => {
         }
 
         res.status(200).json({
-            msg: 'publicaciones encontradas con sus comentarios',
+            msg: 'aqui estan sus comentarios:',
             comentarios,
         });
     } catch (error) {

@@ -32,4 +32,4 @@ comentarioSchema.methods.toJSON = function () {
     return comentario;
 }
 
- export default mongoose.model('comentario', comentarioSchema);
+ export default mongoose.model('Comentario', comentarioSchema);

@@ -1,0 +1,71 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "publicaciones",
+    "dateExported": "2024-03-04T01:15:58.096Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "50d1426e-4385-4f00-ab69-868048cfe362",
+            "colId": "deae9041-d7a1-4057-a2bd-2c6254852aa3",
+            "containerId": "",
+            "name": "publica tu publicacion",
+            "url": "http://localhost:3000/api/v1/comments",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-04T01:09:51.527Z",
+            "modified": "2024-03-04T01:09:51.527Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1MWNiNGRmYTA4YWNmMDU2ZWI5YWQiLCJpYXQiOjE3MDk1MTM5MTgsImV4cCI6MTcwOTUxNzUxOH0.ZB6sbucOdlxrk2nZOyruLhtn9mc2HZN-VfqImkhyeDg"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\": \"Los gatos superiores a perro\",\n  \"categoria\": \"animales\",\n  \"descripcion\": \"Estoy mintiendo\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "81b8a691-d527-407d-b47a-6d9e47a96971",
+            "colId": "deae9041-d7a1-4057-a2bd-2c6254852aa3",
+            "containerId": "",
+            "name": "getPublicaciones",
+            "url": "http://localhost:3000/api/v1/comments",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-04T01:12:23.137Z",
+            "modified": "2024-03-04T01:12:23.137Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "749526f6-a173-4d3c-819f-9c0d48fb5551",
+            "colId": "deae9041-d7a1-4057-a2bd-2c6254852aa3",
+            "containerId": "",
+            "name": "edite su publicacion",
+            "url": "http://localhost:3000/api/v1/comments/2024-03-04T01:09:24.018Z",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-04T01:15:37.948Z",
+            "modified": "2024-03-04T01:15:37.948Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1MWNiNGRmYTA4YWNmMDU2ZWI5YWQiLCJpYXQiOjE3MDk1MTM5MTgsImV4cCI6MTcwOTUxNzUxOH0.ZB6sbucOdlxrk2nZOyruLhtn9mc2HZN-VfqImkhyeDg"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\": \"vivo o no vivo\",\n  \"categoria\": \"existencialismo\",\n  \"descripcion\": \"no se que hacer con mi vida\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
