@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "publicaciones",
-    "dateExported": "2024-03-04T01:15:58.096Z",
+    "dateExported": "2024-03-04T01:48:47.400Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -63,6 +63,30 @@
             "body": {
                 "type": "json",
                 "raw": "{\n  \"titulo\": \"vivo o no vivo\",\n  \"categoria\": \"existencialismo\",\n  \"descripcion\": \"no se que hacer con mi vida\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0683d503-14b2-4c05-baf1-e54baa98cd7f",
+            "colId": "deae9041-d7a1-4057-a2bd-2c6254852aa3",
+            "containerId": "",
+            "name": "agrege su comentario ",
+            "url": "http://localhost:3000/api/v1/comments/comentario/65e51cb4dfa08acf056eb9ad",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-03-04T01:48:36.858Z",
+            "modified": "2024-03-04T01:48:36.858Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"postId\": \"65e20c14da6d87fd236a2fee\",\n    \"titulo\":\"estas bien animal\",\n    \"descripcion\":\"a nadie le importa\"\n}",
                 "form": []
             },
             "tests": []
